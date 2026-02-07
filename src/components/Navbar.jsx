@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // ✅ Menu config (IMPORTANT CHANGE)
+  // ✅ SAME menu config (UNCHANGED)
   const menuItems = [
     { label: "Home", path: "/" },
     { label: "About", path: "/about" },
@@ -13,68 +13,90 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="w-full fixed top-0 z-50 bg-gradient-to-r from-slate-900/95 via-indigo-900/90 to-purple-900/90 backdrop-blur-lg border-b border-slate-800 shadow-2xl">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between perspective-1500">
+    <>
+      {/* Apple-style Glass Navbar */}
+      <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-6xl
+        rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 shadow-xl">
         
-        {/* Logo */}
-        <div className="text-2xl font-extrabold tracking-wide text-white transform-gpu transition-transform duration-300 hover:-translate-y-2 hover:rotate-6 hover:scale-105 text-shadow-lg">
-          Portfolio<span className="text-indigo-400">.</span>
-        </div>
+        <div className="flex items-center justify-between px-6 py-3">
+          
+          {/* Logo (clean Apple feel) */}
+          <div className="text-lg font-semibold tracking-wide text-white">
+            Portfolio<span className="text-indigo-400">.</span>
+          </div>
 
-        {/* Desktop Menu */}
-        <ul className="hidden md:flex items-center gap-8 text-slate-300">
-          {menuItems.map((item) => (
-            <li
-              key={item.label}
-              className="cursor-pointer transform-gpu transition duration-300 hover:-translate-y-2 hover:scale-110 hover:text-indigo-400 hover:shadow-[0_0_10px_rgba(79,70,229,0.6)]"
-            >
-              <a href={item.path}>{item.label}</a>
+          {/* Desktop Menu */}
+          <ul className="hidden md:flex items-center gap-8 text-sm text-white/80">
+            {menuItems.map((item) => (
+              <li key={item.label}>
+                <a
+                  href={item.path}
+                  className="transition hover:text-white"
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
+
+            {/* Resume Button */}
+            <li>
+              <a
+                href="/resume"
+                className="px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-md
+                  text-white text-sm font-medium border border-white/30
+                  transition hover:bg-white/30"
+              >
+                Resume
+              </a>
             </li>
-          ))}
+          </ul>
 
-          {/* Resume Button */}
-          <li>
-            <a
-              href="/resume"
-              className="px-5 py-2 rounded-lg bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold shadow-lg transition-transform transform-gpu hover:-translate-y-2 hover:scale-105 hover:shadow-2xl hover:from-indigo-500 hover:to-purple-500"
-            >
-              Resume
-            </a>
-          </li>
-        </ul>
-
-        {/* Mobile Menu Icon */}
-        <div
-          className="md:hidden text-white text-3xl cursor-pointer transform-gpu transition-transform hover:rotate-12 hover:scale-110"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          ☰
+          {/* Mobile Menu Icon */}
+          <div
+            className="md:hidden text-white text-2xl cursor-pointer"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            ☰
+          </div>
         </div>
-      </div>
+      </nav>
 
-      {/* Mobile Menu */}
+      {/* Apple-style Bottom Sheet Mobile Menu */}
       {isOpen && (
-        <ul className="md:hidden bg-gradient-to-b from-slate-900/95 via-indigo-900/90 to-purple-900/90 backdrop-blur-lg border-t border-slate-800 shadow-inner flex flex-col items-center gap-4 py-4 text-slate-300">
-          {menuItems.map((item) => (
-            <li
-              key={item.label}
-              className="cursor-pointer transform-gpu transition duration-300 hover:-translate-y-1 hover:scale-105 hover:text-indigo-400 hover:shadow-[0_0_8px_rgba(79,70,229,0.5)]"
-            >
-              <a href={item.path}>{item.label}</a>
-            </li>
-          ))}
+        <div className="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm">
+          <div className="absolute bottom-0 w-full rounded-t-3xl
+            bg-white/10 backdrop-blur-2xl border-t border-white/20 shadow-2xl">
 
-          <li>
-            <a
-              href="/resume"
-              className="px-5 py-2 rounded-lg bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold shadow-lg transition-transform transform-gpu hover:-translate-y-2 hover:scale-105 hover:shadow-2xl hover:from-indigo-500 hover:to-purple-500"
-            >
-              Resume
-            </a>
-          </li>
-        </ul>
+            {/* iOS drag handle */}
+            <div className="flex justify-center py-2">
+              <div className="h-1 w-12 rounded-full bg-white/30" />
+            </div>
+
+            <ul className="flex flex-col items-center gap-6 py-6 text-white text-lg">
+              {menuItems.map((item) => (
+                <li key={item.label}>
+                  <a
+                    href={item.path}
+                    onClick={() => setIsOpen(false)}
+                    className="transition hover:opacity-80"
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+
+              <a
+                href="/resume"
+                className="mt-2 px-6 py-2 rounded-full bg-indigo-500
+                  text-white font-medium shadow-lg"
+              >
+                Resume
+              </a>
+            </ul>
+          </div>
+        </div>
       )}
-    </nav>
+    </>
   );
 };
 

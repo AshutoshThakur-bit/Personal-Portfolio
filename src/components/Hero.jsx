@@ -4,51 +4,84 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center bg-gradient-to-b from-slate-950 via-slate-900 to-black text-white"
+      className="relative min-h-screen flex items-center bg-black text-white overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center perspective-1500">
+      {/* Cinematic background lights */}
+      <div className="absolute inset-0">
+        <div className="absolute -top-48 left-1/4 w-[700px] h-[700px] bg-indigo-500/20 rounded-full blur-[160px]" />
+        <div className="absolute top-1/3 -right-48 w-[700px] h-[700px] bg-purple-500/20 rounded-full blur-[160px]" />
+        <div className="absolute bottom-0 left-1/3 w-[500px] h-[500px] bg-pink-500/10 rounded-full blur-[140px]" />
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
         
-        {/* Left Content */}
-        <div className="space-y-4">
-          <p className="text-indigo-500 font-medium mb-3 tracking-wide animate-pulse">
+        {/* LEFT — Text content */}
+        <div className="space-y-7">
+          <p className="text-indigo-400 text-sm tracking-widest uppercase">
             Hi, my name is
           </p>
 
-          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 transform-gpu transition-transform hover:-translate-y-2 hover:scale-105">
+          {/* Hero Name — Apple showcase text */}
+          <h1
+            className="text-5xl md:text-7xl font-semibold leading-tight
+            text-transparent bg-clip-text
+            bg-gradient-to-br from-white via-indigo-200 to-purple-400
+            drop-shadow-[0_20px_60px_rgba(99,102,241,0.35)]"
+          >
             Ashutosh Thakur
           </h1>
 
-          <h2 className="text-3xl md:text-5xl font-bold text-slate-400 mt-2 hover:text-indigo-400 transition-colors">
+          <h2 className="text-2xl md:text-4xl font-medium text-white/70">
             I build modern web applications.
           </h2>
 
-          <p className="mt-6 text-slate-400 max-w-xl leading-relaxed text-lg">
+          <p className="mt-6 max-w-xl text-white/60 text-lg leading-relaxed">
             I’m a full-stack developer specializing in building scalable,
-            high-performance web applications using <span className="text-indigo-400 font-semibold">React</span>, <span className="text-purple-400 font-semibold">Node.js</span>, <span className="text-pink-400 font-semibold">Express</span>, and <span className="text-green-400 font-semibold">MongoDB</span>.
+            high-performance web applications using{" "}
+            <span className="text-white font-medium">React</span>,{" "}
+            <span className="text-white font-medium">Node.js</span>,{" "}
+            <span className="text-white font-medium">Express</span>, and{" "}
+            <span className="text-white font-medium">MongoDB</span>.
           </p>
 
-          {/* Buttons */}
-          <div className="mt-8 flex gap-4">
+          {/* CTA Buttons — floating premium */}
+          <div className="mt-10 flex gap-5">
             <a
               href="/projects"
-              className="px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 rounded-xl font-medium shadow-lg transform-gpu transition-transform hover:-translate-y-1 hover:scale-105"
+              className="px-8 py-3 rounded-full bg-white text-black font-medium
+              shadow-[0_15px_40px_rgba(255,255,255,0.25)]
+              transition transform hover:-translate-y-1 hover:shadow-[0_25px_60px_rgba(255,255,255,0.35)]"
             >
               View Projects
             </a>
 
             <a
               href="/contact"
-              className="px-6 py-3 border border-slate-600 hover:border-indigo-500 rounded-xl font-medium transition transform-gpu hover:-translate-y-1 hover:scale-105"
+              className="px-8 py-3 rounded-full border border-white/30
+              text-white font-medium backdrop-blur-xl
+              transition transform hover:-translate-y-1 hover:bg-white/10"
             >
               Contact Me
             </a>
           </div>
         </div>
 
-        {/* Right Side (3D Code Card) */}
-        <div className="hidden md:flex justify-center">
-          <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-2xl w-full max-w-md transform-gpu transition-transform hover:-translate-y-3 hover:rotate-3 hover:scale-105">
-            <pre className="text-sm text-slate-300 font-mono animate-pulse">
+        {/* RIGHT — Cinematic 3D Glass Card */}
+        <div className="hidden md:flex justify-center perspective-[2000px]">
+          <div
+            className="relative w-full max-w-md rounded-[28px]
+            bg-white/10 backdrop-blur-2xl
+            border border-white/20
+            shadow-[0_40px_120px_rgba(0,0,0,0.7)]
+            p-7
+            transform-gpu transition duration-700
+            hover:-translate-y-6 hover:scale-105
+            hover:rotate-x-8 hover:rotate-y-8"
+          >
+            {/* Glass highlight */}
+            <div className="absolute inset-0 rounded-[28px] bg-gradient-to-br from-white/10 to-transparent pointer-events-none" />
+
+            <pre className="relative text-sm text-white/80 font-mono">
               <code>
 {`const developer = {
   name: "Ashutosh",

@@ -59,29 +59,6 @@ VS Code
 
 Vercel / Netlify (Deployment)
 
-📂 Project Structure
-personal-portfolio/
-│
-├── public/
-│   └── index.html
-│
-├── src/
-│   ├── components/
-│   │   ├── Navbar.jsx
-│   │   ├── Hero.jsx
-│   │   ├── About.jsx
-│   │   ├── Skills.jsx
-│   │   ├── Projects.jsx
-│   │   └── Contact.jsx
-│   │
-│   ├── assets/
-│   ├── App.jsx
-│   ├── index.js
-│   └── styles.css
-│
-├── package.json
-├── README.md
-└── .gitignore
 
 ⚙️ Installation & Setup
 

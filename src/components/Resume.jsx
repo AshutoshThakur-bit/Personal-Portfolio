@@ -24,12 +24,23 @@ const projects = [
   },
   {
     name: "Real-Time Live Tracking System",
-    date: "Jan 2025",
+    date: "Aug 2025",
     link: "https://github.com/AshutoshThakur-bit/LiveTracking",
     points: [
       "Built real-time tracking system with sub-second updates",
       "Implemented JWT authentication and role-based access control",
       "Improved backend performance by 35%",
+    ],
+  },
+  {
+    name: "AI Personal Finance & Investment Assitant",
+    date: "Jan 2026",
+    link: "https://github.com/AshutoshThakur-bit/Ai-Personal-Finance-Investment-Assistant.git",
+    points: [
+      "Built a full-stack finance platform for tracking income, expanse & investment",
+      "Implement AI-based expanse forecasting and smart budget recommedation",
+      "Developed portfolio analyser with risk assessment & asset allocation insights",
+      "Integrated LLM-powered assistant for natural language financial quaries",
     ],
   },
 ];

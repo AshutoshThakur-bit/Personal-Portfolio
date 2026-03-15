@@ -1,16 +1,127 @@
-# React + Vite
+# 🚀 Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive **Personal Portfolio Website** built using **React** to showcase my skills, projects, experience, and contact details in a professional and recruiter-friendly manner.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📖 Table of Contents
 
-## React Compiler
+* About the Project
+* Features
+* Tech Stack
+* Project Structure
+* Installation & Setup
+* Deployment
+* Author
+* License
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📌 About the Project
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This is a **personal portfolio website** developed using **React**.
+The primary goal of this project is to present my **skills, projects, and experience** in a clean, modern, and professional format suitable for recruiters, hiring managers, and clients.
+
+---
+
+## ✨ Features
+
+* Built with **React** for a fast and dynamic UI
+* Fully responsive design (Mobile, Tablet, Desktop)
+* Clean and reusable **component-based architecture**
+* Smooth navigation and modern layout
+* Easy to customize and extend
+* Optimized for **performance and SEO**
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* React
+* JavaScript (ES6+)
+* HTML5
+* CSS3 / Tailwind CSS
+
+### Tools & Platforms
+
+* Git & GitHub
+* VS Code
+* Vercel / Netlify (Deployment)
+
+---
+
+## 📁 Project Structure
+
+```
+personal-portfolio
+│
+├── public
+├── src
+│   ├── components
+│   ├── pages
+│   ├── assets
+│   ├── styles
+│   ├── App.jsx
+│   └── main.jsx
+│
+├── package.json
+├── README.md
+└── vite.config.js / webpack.config.js
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+Follow these steps to run the project locally:
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/your-username/personal-portfolio.git
+```
+
+### 2️⃣ Navigate to the project directory
+
+```bash
+cd personal-portfolio
+```
+
+### 3️⃣ Install dependencies
+
+```bash
+npm install
+```
+
+### 4️⃣ Start the development server
+
+```bash
+npm start
+```
+
+The application will run locally on:
+
+```
+http://localhost:3000
+```
+
+---
+
+## 🌍 Deployment
+
+This project is deployed using **Vercel** and can also be deployed on **Netlify**.
+
+🔗 **Live Demo:**
+[https://personal-portfolio-five-eosin-10.vercel.app/](https://personal-portfolio-five-eosin-10.vercel.app/)
+
+---
+
+## 👤 Author
+
+**Ashutosh Thakur**
+Frontend Developer | React Enthusiast
+
+
+⭐ If you like this project, please consider giving it a star!

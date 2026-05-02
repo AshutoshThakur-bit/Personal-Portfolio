@@ -91,7 +91,7 @@ const Resume = () => {
             Ashutosh Thakur
           </h1>
           <p className="mt-4 text-sm md:text-base text-white/60">
-            New Delhi, India • ashuuthakur001@gmail.com • +91-8700377423
+            New Delhi, India • ashuuthakur0001@gmail.com • +91-8700377423
           </p>
         </div>
 
